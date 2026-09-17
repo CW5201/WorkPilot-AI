@@ -1,0 +1,10 @@
+{
+  "columns": ["date", "dept", "sales", "new_customers", "revenue_growth"],
+  "rows": [
+    {"date": "2026-04-06", "dept": "华东", "sales": 152000, "new_customers": 8, "revenue_growth": 0.05},
+    {"date": "2026-04-06", "dept": "华南", "sales": 131000, "new_customers": 6, "revenue_growth": 0.07},
+    {"date": "2026-04-13", "dept": "华东", "sales": 176000, "new_customers": 9, "revenue_growth": 0.084},
+    {"date": "2026-04-13", "dept": "华南", "sales": 162000, "new_customers": 7, "revenue_growth": 0.09},
+    {"date": "2026-04-13", "dept": "华北", "sales": 118000, "new_customers": 4, "revenue_growth": -0.02}
+  ]
+}

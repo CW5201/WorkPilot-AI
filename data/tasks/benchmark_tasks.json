@@ -1,0 +1,17 @@
+{
+  "tasks": [
+    {"task_id": "bench_000", "instruction": "汇总周一部门周报，提取OKR，生成3页PPT，整理邮件草稿", "category": "文档处理/PPT", "expected_tools": ["file.read", "analysis.summarize", "ppt.create", "email.draft"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_001", "instruction": "读取周二会议纪要，提取待办，创建日程，生成跟进邮件", "category": "日程/邮件", "expected_tools": ["file.read", "analysis.extract_todos", "calendar.create", "email.draft"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_002", "instruction": "读取销售Excel，分析达成率，生成统计报告", "category": "报表分析", "expected_tools": ["spreadsheet.read", "analysis.summarize", "document.create"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_003", "instruction": "查询企业知识库SOP，按规范生成文档并保存", "category": "知识检索", "expected_tools": ["knowledge.search", "document.create", "file.write"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_004", "instruction": "网页搜索企业数字员工趋势，汇总资料，生成研究简报", "category": "多步骤/研究", "expected_tools": ["web.search", "analysis.summarize", "document.create"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_005", "instruction": "整理汇报邮件并发送给领导，发送前需确认", "category": "邮件/审批", "expected_tools": ["email.draft", "email.send"], "requires_approval": true, "expected_success": true},
+    {"task_id": "bench_006", "instruction": "汇总本周一部门周报，提取OKR，生成3页PPT，整理邮件草稿", "category": "文档处理/PPT", "expected_tools": ["file.read", "analysis.summarize", "ppt.create", "email.draft"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_007", "instruction": "读取上周会议纪要，提取待办，创建日程，生成跟进邮件", "category": "日程/邮件", "expected_tools": ["file.read", "analysis.extract_todos", "calendar.create", "email.draft"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_008", "instruction": "读取销售Excel，分析达成率，生成统计报告", "category": "报表分析", "expected_tools": ["spreadsheet.read", "analysis.summarize", "document.create"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_009", "instruction": "查询企业知识库SOP，按规范生成文档并保存", "category": "知识检索", "expected_tools": ["knowledge.search", "document.create", "file.write"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_010", "instruction": "网页搜索AI办公趋势，汇总资料，生成研究简报", "category": "多步骤/研究", "expected_tools": ["web.search", "analysis.summarize", "document.create"], "requires_approval": false, "expected_success": true},
+    {"task_id": "bench_011", "instruction": "整理汇报邮件并发送给领导，发送前需确认", "category": "邮件/审批", "expected_tools": ["email.draft", "email.send"], "requires_approval": true, "expected_success": true}
+  ],
+  "_note": "评测任务集示例（12 条）。完整 100 条由 app.evaluation._builtin_taskset 确定性生成，覆盖 文档处理/报表分析/PPT/邮件/日程/知识检索/多步骤/Tool失败/人工审批。扩到 100 时把本文件补全即可，评测框架会自动读取。"
+}

@@ -1,0 +1,10 @@
+# 任务交付（email）
+
+目标：汇总5份部门周报并发送周报邮件给领导
+
+## 中间结果
+- 已读取 5 份文件：cs_week16.md、finance_week16.md、hr_week16.md、prod_week16.md、sales_week16.md
+- analysis.summarize 完成
+- PPT 演示文稿 共 3 页
+- email.draft 完成
+- email.send 完成
