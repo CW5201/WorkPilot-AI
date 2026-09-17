@@ -46,23 +46,25 @@ def test_artifact_store_roundtrip():
 
 def test_plan_topological_order():
     from app.models import Plan, PlanStep
-    p = Plan(task_id="t", goal="g", steps=[
-        PlanStep.new("a"),
-        PlanStep.new("b", depends_on=[]),
-    ])
+    a = PlanStep.new("a")
+    b = PlanStep.new("b")
+    b.depends_on = [a.step_id]
+    p = Plan(task_id="t", goal="g", steps=[a, b])
     order = p.topological_order()
-    assert order[0] == "a"
+    assert order.index(a.step_id) < order.index(b.step_id)
 
 
 def test_evaluator_pass_and_fail():
     from app.agents.evaluator import get_evaluator
-    from app.models import TaskRecord
-    e = get_evaluator()
-    t = TaskRecord(task_id="t", instruction="i")
+    from app.models import TaskRecord, PlanStep
+
     class _R:
         def __init__(self, step, ok, error=""):
             self.step = step; self.ok = ok; self.error = error
-    from app.models import PlanStep
+            self.artifact = None if not ok else object()
+
+    e = get_evaluator()
+    t = TaskRecord(task_id="t", instruction="i")
     ok = _R(PlanStep.new("x"), True)
     fail = _R(PlanStep.new("x"), False, "tool boom")
     ev_pass = e._rule_eval(t, [ok])
@@ -81,4 +83,5 @@ def test_benchmark_framework():
 def test_api_builds():
     from app.main import create_app
     app = create_app()
-    assert any("/tasks" in p for p in app.routes and [getattr(r, "path", "") for r in app.routes])
+    paths = [getattr(r, "path", "") for r in app.routes]
+    assert any("/tasks" in p for p in paths), paths
