@@ -1,0 +1,54 @@
+[
+  {
+    "to": [
+      "boss@example.com"
+    ],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  },
+  {
+    "to": [
+      "boss@example.com"
+    ],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  },
+  {
+    "to": [],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  },
+  {
+    "to": [],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  },
+  {
+    "to": [],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  },
+  {
+    "to": [],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  },
+  {
+    "to": [],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  },
+  {
+    "to": [],
+    "subject": "部门周报汇总",
+    "body_len": 0,
+    "sent": true
+  }
+]
